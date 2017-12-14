@@ -5,7 +5,7 @@ ENV WEBDAV_DATA_DIR=/var/data
 USER 0
 RUN mkdir -p $WEBDAV_DATA_DIR \
   && chmod -R a+rwx $WEBDAV_DATA_DIR \
-  && chown -R 1001:0 $WEBDAV_DATA_DIR \
+  && chown -R 1001.0 $WEBDAV_DATA_DIR \
   && rm -rf /run/httpd \
   && mkdir /run/httpd \
   && chmod -R a+rwx /run/httpd
